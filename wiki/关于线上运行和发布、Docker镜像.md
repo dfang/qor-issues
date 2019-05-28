@@ -65,4 +65,10 @@ bindatafs.AssetFS.NameSpace("views").RegisterPath("app/views")
 controller := &Controller{ View: render.New( &render.Config{ AssetFileSystem: bindatafs.AssetFS.NameSpace("home"), }),
 ```
 
+3. build 的时候带上 tags, 因为 config/ 下的 templates 里加了 +build bindatafs
+
+```
+GOOS=darwin GOARCH=amd64 go build -tags bindatafs
+```
+
 总之，保证单文件在项目目录之外能够运行，不报`failed to find template` 和 i18n 未正常显示的问题， 就表示改造成功
