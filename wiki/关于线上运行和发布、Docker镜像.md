@@ -72,3 +72,10 @@ GOOS=darwin GOARCH=amd64 go build -tags bindatafs
 ```
 
 总之，保证单文件在项目目录之外能够运行，不报`failed to find template` 和 i18n 未正常显示的问题， 就表示改造成功
+
+编译成单个执行文件，需要关注这几个 repo
+
+- [qor/render](https://github.com/qor/render)
+- [qor/assetfs](https://github.com/qor/assetfs/)
+- [qor/bindatafs](https://github.com/qor/bindatafs)
+- [go-bindata](https://github.com/jteeuwen/go-bindata)
